@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
     <title>BOX</title>
 </head>
+
 <body>
     <div class="container">
         <div class="score">
-            <div id="x-player"><img  src="res10.png" ></div>
-            <div id="y-player"><img id= "imgx" src="cancel.png" ></div>
-            <div id="equale"><img src="balance.png" ></div>
-            <br>
-            <div id="x-player1"> 4 wins</div>
-            <div id="y-player1"> 2 wins</div>
-            <div id="equale1">2 draws</div>
+            <div id="picture">
+                <div id="x-player"><img src="res10.png"></div>
+                <div id="y-player"><img id="imgx" src="cancel.png"></div>
+                <div id="equale"><img src="balance.png"></div>
+            </div>
+            <div id="result">
+                <div id="x-player1"> <span id="oWin">0</span> wins</div>
+                <div id="y-player1"> <span id="xWin">0</span> wins</div>
+                <div id="equale1"> <span id="draws">0</span> draws</div>
+            </div>
         </div>
         <table>
             <tr>
-                <td><img src="cancel11.png" class="input-cel-1"></td>
-                <td><img src="res10.png" class="input-cel-1"></td>
-                <td class="cel-1"><img src="res10.png" class="input-cel-1"></td>
+                <td class="box-container"><img id="0" src="cancel11.png" class="input-cel-1"></td>
+                <td class="box-container"><img id="1" src="res10.png" class="input-cel-1"></td>
+                <td class="cel-1 box-container"><img id="2" src="res10.png" class="input-cel-1"></td>
             </tr>
             <tr>
-                <td><img src="res10.png" class="input-cel-1"></td>
-                <td><img src="res10.png" class="input-cel-1"></td>
-                <td class="cel-1"><img src="res10.png" class="input-cel-1"></td>
+                <td class="box-container"><img id="3" src="res10.png" class="input-cel-1"></td>
+                <td class="box-container"><img id="4" src="res10.png" class="input-cel-1"></td>
+                <td class="cel-1 box-container"><img id="5" src="res10.png" class="input-cel-1"></td>
             </tr>
             <tr>
-                <td class="cel-2"><img src="res10.png" class="input-cel-1"></td>
-                <td class="cel-2"><img src="res10.png" class="input-cel-1"></td>
-                <td class="cel-1 cel-2"><img src="res10.png" class="input-cel-1"></td>
+                <td class="cel-2 box-container"><img id="6" src="res10.png" class="input-cel-1"></td>
+                <td class="cel-2 box-container"><img id="7" src="res10.png" class="input-cel-1"></td>
+                <td class="cel-1 cel-2 box-container"><img id="8" src="res10.png" class="input-cel-1"></td>
             </tr>
         </table>
-        
+
         <div class="player">
-        <img src="cancel11.png" id = "img"/>
-        <img src="res10.png" id = "img1"/>
+            <div id="crossCon">
+                <img src="cancel11.png" id="img" />
+            </div>
+            <div id="circulCon">
+                <img src="res10.png" id="img1" />
+            </div>
         </div>
-    <div class="sitting">
-           <div id ="res"><img src="recycle.png" id = "recycle"></div>
-           <div id = "pla"><p id ="ppla">1 player</p></div>
-           <div id = "sitt"><img src="setting.png" id = "pict"></div>
+        <div class="sitting">
+            <div id="res"><img src="recycle.png" id="recycle"></div>
+            <div id="pla">
+                <p id="ppla">1 player</p>
+            </div>
+            <div id="sitt"><img src="setting.png" id="pict"></div>
+        </div>
     </div>
-    </div>
-    
+
 </body>
+
 </html>

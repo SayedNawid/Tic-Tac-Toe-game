@@ -47,23 +47,10 @@ tr, td{
     background-color: white;
     border: none;
     text-align: center;
+    opacity: 0;
+    transition: all 0.4s;
 }
 
-.player{
-    margin-top:30px;
-    width: 70px;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid rgb(168, 167, 167);
-    border-radius:50px;
-    align-items: center;
-    padding: 2% 4%;
-    padding-bottom: 2.6%;
-   
-    
-}
 #x1{
     order: 1;
     width: 40px;
@@ -79,49 +66,38 @@ tr, td{
     border-radius: 50%;
     
 }
-#img1{
-    margin-top: 4px;
-    width: 35%;
-    height: 75%;
-
-}
-#img{
-    margin-top: 6px;
-    width: 30%;
-    height: 60%;
-}
-
 .score{
+    margin-right: 3px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
-.score div{
-    display: inline;
-    padding: 30px;
-   
+#picture{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+#result{
     
+    width: 325px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
-#x-player{
-    margin-right:15px;
-   
-}
-#y-player{
-    margin-right:20px;
-  
-   
-}
+
 #imgx{
     width: 30px;
     height: 30px;
 }
- #equale{
-     margin-right: 6px;
-     width: 50px;
-     height: 50px;
- }
+
 #x-player1{
     color: rgb(18, 211, 245);
     font-family:cursive;
-    margin-top: 4%;
+    
   
     
  }
@@ -129,13 +105,13 @@ tr, td{
     margin-left:5px;
     color: rgb(49, 49, 252);
     font-family:cursive;
-    margin-top: 4%;
+    
   
 }
 #equale1{
     color: gray;
     font-family:cursive;
-    margin-top: 4%;
+   
     
     
 }
@@ -185,4 +161,28 @@ tr, td{
 }
 #pict, #recycle{
     margin-top: 7px;
+}
+
+.player{
+    width: 85px;
+    margin-top:30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid rgb(168, 167, 167);
+    border-radius: 30px;
+    align-items: center;
+}
+
+.player > div {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    transition: all .4s  ease;
 }
