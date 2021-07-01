@@ -1,10 +1,6 @@
 
 // initialize the varables that we need
 let turn = 1
-let gameActive = true
-let conterx = 0
-let contery = 0
-let conterE = 0
 let roundWin = false;
 // circle = 1   cross = 2  empty = 0
 let gameStroage = [0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -67,22 +63,17 @@ function checkWinner() {
         }
         if (a === b && b === c) {
             if (turn === 1) {
-                alert("Cross")
                 let x = document.getElementById('xWin');
-                console.log(x.innerText);
                 x.innerText = parseInt(x.innerText) + 1;
             } else if (turn === 2) {
-                alert("Circle")
                 let o = document.getElementById('oWin');
                 o.innerText = parseInt(o.innerText) + 1;
             }
             roundWin = true;
-            console.log('round win set to ' + roundWin)
             return
         }
     }
     if (!gameStroage.includes(0)) {
-        alert("roundDraw")
         let d = document.getElementById('draws');
         d.innerText = parseInt(d.innerText) + 1;
         return
@@ -106,17 +97,6 @@ function reset() {
     Array.prototype.forEach.call(cells , e => {
         e.style.opacity = 0;
     });
-}
-function counter() {
-    for (let i = 0; i < winConditions.length; i++) {
-        if (turn === 1) {
-            conterx++
-        } else if (turn === 2) {
-            contery++
-        }
-        conterE++
-        return
-    }
 }
 
 
