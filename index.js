@@ -17,10 +17,7 @@ const winConditions = [
 window.onload = () => {
     setBackToTern(turn != 1);
     let result = document.getElementsByClassName("input-cel-1")
-    console.log(typeof result)
-
     document.getElementById("res").addEventListener("click", function (e) {
-        console.log("reset clicked")
         reset()
     });
     Array.prototype.forEach.call(result, element => {
@@ -28,7 +25,6 @@ window.onload = () => {
             console.log(roundWin)
             if (!roundWin) {
                 let cellNumb = e.target.id
-
                 let value = gameStroage[cellNumb]
                 if (value !== 0) return
                 gameStroage[cellNumb] = turn
@@ -43,14 +39,11 @@ window.onload = () => {
                 }
                 e.target.style.opacity = 1;
                 checkWinner()
-
             } else {
-                alert("Game finished")
+                alert("Game finished Start Again!")
             }
         })
-
-    }
-    )
+    })
 }
 function checkWinner() {
     for (let i = 0; i < winConditions.length; i++) {
@@ -91,10 +84,10 @@ function setBackToTern(tern) {
 }
 
 function reset() {
-    gameStroage.forEach((e , i) => { gameStroage[i] = 0});
+    gameStroage.forEach((e, i) => { gameStroage[i] = 0 });
     roundWin = false;
     let cells = document.getElementsByClassName("input-cel-1");
-    Array.prototype.forEach.call(cells , e => {
+    Array.prototype.forEach.call(cells, e => {
         e.style.opacity = 0;
     });
 }
